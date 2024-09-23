@@ -20,11 +20,13 @@
             <div class="pfp"><h1>O <b style="font-size: 1.1em;">N</b><br><b class="rotate">E</b></h1></div>
             <div class="namecontainer"><h1>OneNKODE</h1></div>
         </div>
-        <div class="gitbtn">
-            <a href="https://github.com/OneNkode">My GitHub page</a>
-        </div>
-        <div class="progbtn">
-            <a href="programms.html">My Programs</a>
+        <div class="button-container">
+            <div class="gitbtn">
+                <a href="https://github.com/OneNkode">My GitHub page</a>
+            </div>
+            <div class="progbtn">
+                <a href="programms.html">My Programs</a>
+            </div>
         </div>
     </header>
     <article class="fullscreen">
@@ -115,7 +117,7 @@
         .rotate {
             writing-mode: vertical-rl;
         }
-        
+
         .namecontainer {
             margin-left: 60px;
             font-size: 0.6em;
@@ -123,45 +125,43 @@
             color: white;
         }
 
+        .button-container {
+            margin-left: auto; /* Align buttons to the right */
+            display: flex;
+            gap: 10px; /* Space between buttons */
+        }
+
         .gitbtn, .progbtn {
-            position: absolute;
-            right: 2vw;
             border-radius: 5px;
-            padding: 0.4em;
-            padding-inline: 1em;
+            padding: 0.4em 1em;
             font-size: 1em;
             text-align: center;
             font-weight: 700;
-            box-sizing: border-box;
-            margin-left: 10px; /* Add some space between buttons */
+            transition: background 0.5s linear;
         }
 
         .gitbtn {
             background: #4444FF;
             color: white;
             transform: skew(-21deg);
-            transition: .5s linear;
         }
 
         .gitbtn:hover {
             border: #4444FF 2px solid;
             color: #4444FF;
             background: transparent;
-            transition: .5s linear;
         }
 
         .progbtn {
             background: #55AA55; /* Different color for the programs button */
             color: white;
             transform: skew(-21deg);
-            transition: .5s linear;
         }
 
         .progbtn:hover {
             border: #55AA55 2px solid;
             color: #55AA55;
             background: transparent;
-            transition: .5s linear;
         }
 
         .fullscreen {
