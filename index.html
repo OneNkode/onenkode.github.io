@@ -3,122 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Web design and Programming">
+    <meta name="keywords" content="Programming, OneNKode, OneNKode Github, OdinHUB, OdinHUB Github, Odinhub Download, Contact OneNKode">
+    <meta name="author" content="OneNKode">
+    <meta property="og:site_name" content="OneNKode">
+    <meta property="og:url" content="https://ndxcode.github.io/">
+    <meta property="og:title" content="Web design and Programming">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Programs - OneNKode</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <meta name="google-site-verification" content="Q-ExO1q4qA7vpiKOk1wsDvN30wbMl4K-46Lzw13JTa8" />
+    <title>OneNKode</title>
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="nameinfo">
+            <div class="pfp"><h1>O <b style="font-size: 1.1em;">N</b><br><b class="rotate">E</b></h1></div>
+            <div class="namecontainer"><h1>OneNKODE</h1></div>
+        </div>
+        <div class="gitbtn">
+            <a href="https://github.com/OneNkode">My GitHub page</a>
+        </div>
+        <div class="progbtn">
+            <a href="programms.html">My Programs</a>
+        </div>
+    </header>
+    <article class="fullscreen">
+        <div class="infocontain">
+            <br>
+            <br>
+            <h1 class="welcometext">Who is <br><b> OneNKode?</b></h1>
+        </div>
+    </article>
+    <div>
+        <div class="footer">
+            <p>Copyright <sup>©</sup> 2022-<b id="currentyear" style="font-weight: 400;"></b> OneNKode</p>
+        </div>
+    </div>
+
     <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap');
+        @font-face {
+            font-family: "RoadTest";
+            src: url(RoadTest.ttf);
         }
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #444;
-            color: white;
-            padding: 20px;
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url(https://wallpapercave.com/wp/wp6705749.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
 
         h1 {
             margin: 0;
+            padding: 5px;
         }
 
-        .button-container {
+        p {
+            color: white;
+        }
+
+        header {
             display: flex;
-            gap: 10px; /* Add space between buttons */
+            align-items: center;
+            background: #333333;
+            width: 100vw;
+            height: 70px;
+            text-align: left;
+            font-size: 1.1em;
+        }
+
+        .pfp {
+            display: flex;
+            padding-top: 6px;
+            align-items: center;
+            text-align: center;
+            line-height: 0.8;
+            position: absolute;
+            font-family: "RoadTest";
+            top: 0;
+            background: radial-gradient(#00CCFF, #0088FF, #0000FF);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            font-weight: 400;
+            background: #222222;
+            font-size: 1.3em;
+            color: white;
+            text-align: center;
+        }
+
+        .nameinfo {
+            margin-left: 2vw;
+        }
+
+        .rotate {
+            writing-mode: vertical-rl;
+        }
+        
+        .namecontainer {
+            margin-left: 60px;
+            font-size: 0.6em;
+            font-family: 'Quicksand', sans-serif;
+            color: white;
         }
 
         .gitbtn, .progbtn {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
+            position: absolute;
+            right: 2vw;
             border-radius: 5px;
-            transition: background 0.3s;
+            padding: 0.4em;
+            padding-inline: 1em;
+            font-size: 1em;
+            text-align: center;
+            font-weight: 700;
+            box-sizing: border-box;
+            margin-left: 10px; /* Add some space between buttons */
         }
 
         .gitbtn {
-            background: #007BFF;
+            background: #4444FF;
+            color: white;
+            transform: skew(-21deg);
+            transition: .5s linear;
         }
 
         .gitbtn:hover {
-            background: #0056b3;
+            border: #4444FF 2px solid;
+            color: #4444FF;
+            background: transparent;
+            transition: .5s linear;
         }
 
         .progbtn {
-            background: #28a745;
+            background: #55AA55; /* Different color for the programs button */
+            color: white;
+            transform: skew(-21deg);
+            transition: .5s linear;
         }
 
         .progbtn:hover {
-            background: #218838;
+            border: #55AA55 2px solid;
+            color: #55AA55;
+            background: transparent;
+            transition: .5s linear;
         }
 
-        .program-list {
-            display: flex;
+        .fullscreen {
+            width: 100vw;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            height: calc(100vh - 120px);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
 
-        .program-card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px;
-            width: 300px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #444;
+        .welcometext {
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: -0.3em;
+            font-size: 7em;
+            text-transform: uppercase;
+            margin-left: 0.5em;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .fullscreen {
+                height: calc(100vh - 70px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .welcometext {
+                font-size: 4.5em;
+            }
         }
     </style>
-</head>
-<body>
-    <header>
-        <h1>My Programs</h1>
-        <div class="button-container">
-            <a href="https://github.com/OneNkode" class="gitbtn">My GitHub page</a>
-            <a href="programms.html" class="progbtn">My Programs</a>
-        </div>
-    </header>
-    <main>
-        <div class="program-list">
-            <div class="program-card">
-                <h2>Program Name 1</h2>
-                <p>Release Date: January 1, 2023</p>
-                <p>Version: 1.0.0</p>
-                <a href="link-to-download-program-1" class="download-btn">Download</a>
-            </div>
-            <div class="program-card">
-                <h2>Program Name 2</h2>
-                <p>Release Date: February 15, 2023</p>
-                <p>Version: 1.1.0</p>
-                <a href="link-to-download-program-2" class="download-btn">Download</a>
-            </div>
-            <div class="program-card">
-                <h2>Program Name 3</h2>
-                <p>Release Date: March 20, 2023</p>
-                <p>Version: 2.0.0</p>
-                <a href="link-to-download-program-3" class="download-btn">Download</a>
-            </div>
-            <!-- Add more programs as needed -->
-        </div>
-    </main>
-    <footer>
-        <p>Copyright <sup>©</sup> 2022-<b id="currentyear"></b> OneNKode</p>
-    </footer>
-
     <script>document.getElementById("currentyear").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
