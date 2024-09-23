@@ -45,7 +45,7 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #74ebd5, #9face6);
             color: #333;
         }
 
@@ -53,13 +53,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #444;
+            background: rgba(34, 34, 34, 0.8);
             color: white;
             padding: 20px;
+            border-bottom: 2px solid #007BFF;
         }
 
         h1 {
             margin: 0;
+            font-size: 2em;
         }
 
         .gitbtn a {
@@ -90,6 +92,11 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .program-card:hover {
+            transform: scale(1.05);
         }
 
         .download-btn {
@@ -110,7 +117,7 @@
         footer {
             text-align: center;
             padding: 10px;
-            background: #444;
+            background: rgba(34, 34, 34, 0.8);
             color: white;
             position: relative;
             bottom: 0;
