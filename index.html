@@ -21,7 +21,7 @@
             <div class="namecontainer"><h1>OneNKODE</h1></div>
         </div>
         <div class="gitbtn">
-            <a href="https://github.com/ndxcode">My GitHub page</a>
+            <a href="https://github.com/onenkode">My GitHub page</a>
         </div>
     </header>
     <article class="fullscreen">
@@ -38,13 +38,6 @@
                     <h1 class="title">My Job</h1>
                     <p class="jobtext" style="margin-left: 0.3em; margin-top: 0em;">I am a software engineer <br> I usually make websites, <br> and applications for <br> Windows and Android</p>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="linkbtn">
-                <img src="https://firebasestorage.googleapis.com/v0/b/eclipseflashtool.appspot.com/o/EFT.png?alt=media&token=b0ab61a4-5b2a-4098-b6d5-360893ea5010&_gl=1*ho5tn6*_ga*MTAwNjMwMzExNC4xNjgxMzIxNzQ5*_ga_CW55HF8NVT*MTY4NjU5MjM0Ny41LjEuMTY4NjU5MjM2My4wLjAuMA.." alt="" class="odinpic">
-                <a href="https://eclipseflashtool.web.app/" style="margin-top: 50px; position: relative; left: 5px; top: 30px;">Eclipse Flash Tool</a>
-                <p class="odintext2" style="font-family: 'Poppins'; font-size: .8em; text-align: left; margin-left: 10px; margin-top: 50px;">Eclipse Flash Tool is an all-in-one flash tool for flashing, controlling, testing and bypassing smartphones</p>
             </div>
         </div>
     </article>
@@ -134,22 +127,6 @@
         .myjob {
             margin-left: 19em;
             margin-top: -11.7em;
-        }
-
-        .card {
-            position: absolute;
-            top: 50%;
-            transform: translate(0, -50%);
-            right: 15vw;
-            width: 280px;
-            display: flex;
-            align-items: flex-start;
-            justify-content: baseline;
-            height: 480px;
-            overflow: hidden;
-            border-radius: 20px;
-            background: rgba(0,0,0,0.2);
-            backdrop-filter: blur(15px);
         }
 
         .footer {
@@ -246,5 +223,36 @@
             font-size: 1.2em;
         }
 
-        .linkbtn {
-            margin-top: 8.3em
+        .jobcontainer {
+            display: grid;
+            place-items: center;
+            grid-template-columns: 1fr;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .fullscreen {
+                height: calc(100vh - 70px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .welcometext {
+                font-size: 4.5em;
+            }
+
+            .programming {
+                position: static;
+                margin: 0;
+                padding: 0;
+            }
+
+            .myjob {
+                position: static;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    </style>
+    <script>document.getElementById("currentyear").innerHTML = new Date().getFullYear();</script>
+</body>
+</html>
