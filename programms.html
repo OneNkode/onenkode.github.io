@@ -90,6 +90,12 @@
             width: 300px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .download-btn {
@@ -112,13 +118,12 @@
             padding: 10px;
             background: #444;
             color: white;
+            width: 100%;
             position: relative;
             bottom: 0;
-            width: 100%;
         }
     </style>
 
     <script>document.getElementById("currentyear").innerHTML = new Date().getFullYear();</script>
 </body>
 </html>
-
