@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Web design and Programming">
     <meta name="keywords" content="Programming, OneNKode, OneNKode Github, OdinHUB, OdinHUB Github, Odinhub Download, Contact OneNKode">
@@ -9,190 +10,331 @@
     <meta property="og:site_name" content="OneNKode">
     <meta property="og:url" content="https://ndxcode.github.io/">
     <meta property="og:title" content="Web design and Programming">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="Q-ExO1q4qA7vpiKOk1wsDvN30wbMl4K-46Lzw13JTa8" />
     <title>OneNKode</title>
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="nameinfo">
-            <div class="pfp"><h1>O <b style="font-size: 1.1em;">N</b><br><b class="rotate">E</b></h1></div>
-            <div class="namecontainer"><h1>OneNKODE</h1></div>
-        </div>
-        <div class="button-container">
-            <div class="gitbtn">
-                <a href="https://github.com/OneNkode">My GitHub page</a>
-            </div>
-            <div class="progbtn">
-                <a href="programms.html">My Programs</a>
-            </div>
-        </div>
-    </header>
-    <article class="fullscreen">
-        <div class="infocontain">
-            <br>
-            <br>
-            <h1 class="welcometext">Who is <br><b> OneNKode?</b></h1>
-        </div>
-    </article>
-    <div>
-        <div class="footer">
-            <p>Copyright <sup>©</sup> 2022-<b id="currentyear" style="font-weight: 400;"></b> OneNKode</p>
-        </div>
-    </div>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap');
         @font-face {
             font-family: "RoadTest";
             src: url(RoadTest.ttf);
         }
 
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
-            background: url(https://wallpapercave.com/wp/wp6705749.jpg);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
         }
 
-        h1 {
-            margin: 0;
-            padding: 5px;
-        }
-
-        p {
-            color: white;
+        body {
+            background: linear-gradient(135deg, #0a0f26, #2a4057, #1b1f2f);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            transition: background 1.5s ease-in-out;
         }
 
         header {
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            background: #333333;
-            width: 100vw;
-            height: 70px;
-            text-align: left;
-            font-size: 1.1em;
+            padding: 1rem 3rem;
+            background: #1a2a3a;
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            animation: slide-down 1s ease-in-out;
         }
 
-        .pfp {
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        header .logo {
             display: flex;
-            padding-top: 6px;
             align-items: center;
-            text-align: center;
-            line-height: 0.8;
-            position: absolute;
-            font-family: "RoadTest";
-            top: 0;
-            background: radial-gradient(#00CCFF, #0088FF, #0000FF);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: #00e0ff;
+            text-shadow: 0 0 15px #00e0ff;
+            animation: pulse 3s infinite;
         }
 
-        .footer {
+        @keyframes pulse {
+            0%, 100% {
+                text-shadow: 0 0 15px #00e0ff;
+            }
+            50% {
+                text-shadow: 0 0 30px #00e0ff;
+            }
+        }
+
+        .hero {
+            background: linear-gradient(to right, rgba(10, 15, 38, 0.9), rgba(42, 64, 87, 0.9)), url('https://images.unsplash.com/photo-1562073795-14bd676b43e4') no-repeat center center/cover;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 50px;
-            width: 100%;
-            font-weight: 400;
-            background: #222222;
-            font-size: 1.3em;
-            color: white;
+            color: #fff;
             text-align: center;
+            position: relative;
+            animation: fade-in 1.5s ease-in-out;
         }
 
-        .nameinfo {
-            margin-left: 2vw;
-        }
-
-        .rotate {
-            writing-mode: vertical-rl;
-        }
-
-        .namecontainer {
-            margin-left: 60px;
-            font-size: 0.6em;
-            font-family: 'Quicksand', sans-serif;
-            color: white;
-        }
-
-        .button-container {
-            margin-left: auto; /* Align buttons to the right */
-            display: flex;
-            gap: 10px; /* Space between buttons */
-        }
-
-        .gitbtn, .progbtn {
-            border-radius: 5px;
-            padding: 0.4em 1em;
-            font-size: 1em;
-            text-align: center;
-            font-weight: 700;
-            transition: background 0.5s linear;
-        }
-
-        .gitbtn {
-            background: #4444FF;
-            color: white;
-            transform: skew(-21deg);
-        }
-
-        .gitbtn:hover {
-            border: #4444FF 2px solid;
-            color: #4444FF;
-            background: transparent;
-        }
-
-        .progbtn {
-            background: #55AA55; /* Different color for the programs button */
-            color: white;
-            transform: skew(-21deg);
-        }
-
-        .progbtn:hover {
-            border: #55AA55 2px solid;
-            color: #55AA55;
-            background: transparent;
-        }
-
-        .fullscreen {
-            width: 100vw;
-            flex-direction: column;
-            height: calc(100vh - 120px);
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-
-        .welcometext {
-            color: white;
-            margin-top: -0.3em;
-            font-size: 7em;
-            text-transform: uppercase;
-            margin-left: 0.5em;
-        }
-
-        @media screen and (max-width: 1024px) {
-            .fullscreen {
-                height: calc(100vh - 70px);
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
             }
         }
 
-        @media screen and (max-width: 480px) {
-            .welcometext {
-                font-size: 4.5em;
+        .hero-content {
+            z-index: 2;
+            animation: scale-in 1.5s ease-in-out;
+        }
+
+        @keyframes scale-in {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .hero h1 {
+            font-size: 5rem;
+            max-width: 80%;
+            font-family: 'Oswald', sans-serif;
+            text-shadow: 0 0 15px #00e0ff;
+            letter-spacing: 2px;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 15px #00e0ff;
+            }
+            100% {
+                text-shadow: 0 0 30px #00e0ff;
+            }
+        }
+
+        .about-section {
+            padding: 5rem;
+            text-align: center;
+            background: #1b1f2f;
+            animation: fade-in-up 1s ease-in-out;
+        }
+
+        @keyframes fade-in-up {
+            0% {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .about-section h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            animation: fade-in-up 1.2s ease-in-out;
+        }
+
+        .about-section p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            animation: fade-in-up 1.4s ease-in-out;
+        }
+
+        .projects-section {
+            padding: 5rem;
+            text-align: center;
+            background: #102027;
+            animation: fade-in-up 1s ease-in-out;
+        }
+
+        .projects-section h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            color: #00e0ff;
+            animation: fade-in-up 1.2s ease-in-out;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+        }
+
+        .program-card {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 2rem;
+            width: 320px;
+            border-radius: 15px;
+            margin: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            text-align: center;
+            animation: card-pop 0.6s ease-in-out;
+        }
+
+        @keyframes card-pop {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+            animation: hover-pop 0.6s ease-in-out;
+        }
+
+        @keyframes hover-pop {
+            0% {
+                transform: translateY(-10px) scale(1);
+            }
+            100% {
+                transform: translateY(-10px) scale(1.05);
+            }
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #28a745;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+            animation: fade-in-up 1.4s ease-in-out;
+        }
+
+        .download-btn:hover {
+            background: #218838;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #1a2a3a;
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        footer a {
+            color: #00e0ff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #009acb;
+            animation: pulse 1s infinite alternate;
+        }
+
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .about-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .projects-section h2 {
+                font-size: 2.5rem;
             }
         }
     </style>
-    <script>document.getElementById("currentyear").innerHTML = new Date().getFullYear();</script>
+</head>
+<body>
+    <header>
+        <div class="logo">NDXCode</div>
+        <a class="github-link" href="https://github.com/OneNkode" target="_blank" style="padding: 10px 20px; background: #00e0ff; color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold;">GitHub</a>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>OneNKode</h1>
+        </div>
+    </section>
+    <section id="about" class="about-section">
+        <h2>Who is OneNKode?</h2>
+        <p>OneNKode is passionate about creating elegant and efficient programming solutions. Whether you're in need of modern web design, application development, or consulting, OneNKode is here to bring your ideas to life with a modern, sleek, and efficient approach.</p>
+    </section>
+    <section id="projects" class="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="program-card">
+                <h2>TeleArchiver</h2>
+                <p>Release Date: nov 20, 2024</p>
+                <p>Version: 1.2</p>
+                <a href="https://github.com/OneNkode/TeleArchiver-/releases/download/V1.2/tele_archiver.exe" class="download-btn">Download</a>
+            </div>
+            <div class="program-card">
+                <h2>Printer Toolbox</h2>
+                <p>Release Date: szept 23, 2024</p>
+                <p>Version: 1.2</p>
+                <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Printer-Toolbox_by_OneNKode_V1.1/printertoolbox.exe" class="download-btn">Download</a>
+            </div>
+            <div class="program-card">
+                <h2>Esmp Client</h2>
+                <p>Release Date: szept 15, 2024</p>
+                <p>Version: 1.1.0</p>
+                <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Esmp-Client_byNDXcode_V1.1/ESMP-Client-v1.1.exe" class="download-btn">Download</a>
+            </div>
+            <div class="program-card">
+                <h2>SuperSpecs - Made by OneNKode</h2>
+                <p>Release Date: szept 24, 2024</p>
+                <p>Version: 1.4</p>
+                <a href="https://github.com/OneNkode/OneNKode-SystemMonitor/releases/download/V1.5/specs.exe" class="download-btn">Download</a>
+            </div>
+        </div>
+    </section>
+    <footer id="contact">
+        <p>Copyright <sup>&copy;</sup> 2022-<b id="currentyear"></b> OneNKode | All rights reserved</p>
+        <p>Connect with me on <a href="https://github.com/OneNkode" target="_blank">GitHub</a></p>
+    </footer>
+    <script>
+        document.getElementById("currentyear").innerHTML = new Date().getFullYear();
+    </script>
 </body>
 </html>
