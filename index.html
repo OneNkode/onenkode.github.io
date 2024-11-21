@@ -8,7 +8,6 @@
     <meta name="keywords" content="Programming, OneNKode, OneNKode Github, OdinHUB, OdinHUB Github, Odinhub Download, Contact OneNKode">
     <meta name="author" content="OneNKode">
     <meta property="og:site_name" content="OneNKode">
-    <meta property="og:url" content="https://ndxcode.github.io/">
     <meta property="og:title" content="Web design and Programming">
     <meta name="google-site-verification" content="Q-ExO1q4qA7vpiKOk1wsDvN30wbMl4K-46Lzw13JTa8" />
     <title>OneNKode</title>
@@ -269,11 +268,30 @@
             text-decoration: none;
             transition: background 0.5s, transform 0.3s;
             animation: fade-in-up 1.4s ease-in-out;
+            position: relative;
+            overflow: hidden;
         }
 
         .download-btn:hover {
             background: linear-gradient(45deg, #218838, #28a745);
             transform: scale(1.1) rotate(-2deg);
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+            transition: transform 0.5s;
+        }
+
+        .download-btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
         }
 
         .modal {
@@ -298,6 +316,18 @@
             color: white;
             border-radius: 15px;
             text-align: center;
+            animation: modal-fade-in 0.8s ease-in-out;
+        }
+
+        @keyframes modal-fade-in {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
 
         .close {
@@ -356,7 +386,7 @@
 <body>
     <div id="particles-js"></div>
     <header>
-        <div class="logo">NDXCode</div>
+        <div class="logo">OneNKode</div>
         <a class="github-link" href="https://github.com/OneNkode" target="_blank" style="padding: 10px 20px; background: #00e0ff; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.5s, transform 0.3s;">GitHub</a>
     </header>
     <section class="hero">
