@@ -8,6 +8,7 @@
     <meta name="keywords" content="Programming, OneNKode, OneNKode Github, OdinHUB, OdinHUB Github, Odinhub Download, Contact OneNKode">
     <meta name="author" content="OneNKode">
     <meta property="og:site_name" content="OneNKode">
+    <meta property="og:url" content="https://ndxcode.github.io/">
     <meta property="og:title" content="Web design and Programming">
     <meta name="google-site-verification" content="Q-ExO1q4qA7vpiKOk1wsDvN30wbMl4K-46Lzw13JTa8" />
     <title>OneNKode</title>
@@ -58,6 +59,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            transition: background 0.5s;
         }
 
         @keyframes slide-down {
@@ -385,8 +387,8 @@
 </head>
 <body>
     <div id="particles-js"></div>
-    <header>
-        <div class="logo">OneNKode</div>
+    <header id="header">
+        <div class="logo">NDXCode</div>
         <a class="github-link" href="https://github.com/OneNkode" target="_blank" style="padding: 10px 20px; background: #00e0ff; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.5s, transform 0.3s;">GitHub</a>
     </header>
     <section class="hero">
@@ -463,6 +465,15 @@
         function closeModal() {
             document.getElementById('myModal').style.display = 'none';
         }
+
+        // Header background brightness effect following mouse movement
+        const header = document.getElementById('header');
+        document.addEventListener('mousemove', function(e) {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            const brightness = 1.2 + x * 0.5;
+            header.style.background = `linear-gradient(135deg, rgba(26, 42, 58, ${brightness}), rgba(42, 64, 87, ${brightness}))`;
+        });
     </script>
 </body>
 </html>
