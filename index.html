@@ -2,478 +2,365 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Web design and Programming">
     <meta name="keywords" content="Programming, OneNKode, OneNKode Github, OdinHUB, OdinHUB Github, Odinhub Download, Contact OneNKode">
     <meta name="author" content="OneNKode">
     <meta property="og:site_name" content="OneNKode">
-    <meta property="og:url" content="https://ndxcode.github.io/">
+    <meta property="og:url" content="https://onenkode.hu/">
     <meta property="og:title" content="Web design and Programming">
-    <meta name="google-site-verification" content="Q-ExO1q4qA7vpiKOk1wsDvN30wbMl4K-46Lzw13JTa8" />
     <title>OneNKode</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="icon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Poppins:wght@400;700&display=swap');
-        @font-face {
-            font-family: "RoadTest";
-            src: url(RoadTest.ttf);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        body {
-            background: linear-gradient(135deg, #0a0f26, #2a4057, #1b1f2f);
-            color: #fff;
-            line-height: 1.6;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-            transition: background 1.5s ease-in-out;
-        }
-
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 3rem;
-            background: #1a2a3a;
-            color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-            animation: slide-down 1s ease-in-out;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: background 0.5s;
-        }
-
-        @keyframes slide-down {
-            0% {
-                transform: translateY(-100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            font-family: 'Oswald', sans-serif;
-            color: #00e0ff;
-            text-shadow: 0 0 15px #00e0ff;
-            animation: pulse 3s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                text-shadow: 0 0 15px #00e0ff;
-            }
-            50% {
-                text-shadow: 0 0 30px #00e0ff;
-            }
-        }
-
-        .hero {
-            background: linear-gradient(to right, rgba(10, 15, 38, 0.9), rgba(42, 64, 87, 0.9)), url('https://images.unsplash.com/photo-1562073795-14bd676b43e4') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fff;
-            text-align: center;
-            position: relative;
-            animation: fade-in 1.5s ease-in-out;
-        }
-
-        @keyframes fade-in {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .hero-content {
-            z-index: 2;
-            animation: scale-in 1.5s ease-in-out;
-        }
-
-        @keyframes scale-in {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .hero h1 {
-            font-size: 5rem;
-            max-width: 80%;
-            font-family: 'Oswald', sans-serif;
-            text-shadow: 0 0 15px #00e0ff;
-            letter-spacing: 2px;
-            animation: glow 3s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 15px #00e0ff;
-            }
-            100% {
-                text-shadow: 0 0 30px #00e0ff;
-            }
-        }
-
-        .about-section {
-            padding: 5rem;
-            text-align: center;
-            background: #1b1f2f;
-            animation: fade-in-up 1s ease-in-out;
-        }
-
-        @keyframes fade-in-up {
-            0% {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .about-section h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            animation: fade-in-up 1.2s ease-in-out;
-        }
-
-        .about-section p {
-            font-size: 1.3rem;
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.8;
-            animation: fade-in-up 1.4s ease-in-out;
-        }
-
-        .projects-section {
-            padding: 5rem;
-            text-align: center;
-            background: #102027;
-            animation: fade-in-up 1s ease-in-out;
-        }
-
-        .projects-section h2 {
-            font-size: 3rem;
-            margin-bottom: 2rem;
-            color: #00e0ff;
-            animation: fade-in-up 1.2s ease-in-out;
-        }
-
-        .projects-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 3rem;
-        }
-
-        .program-card {
-            background: linear-gradient(145deg, #1a1a2e, #1f1f35);
-            color: #fff;
-            padding: 2rem;
-            width: 320px;
-            border-radius: 15px;
-            margin: 2rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
-            text-align: center;
-            animation: card-pop 0.6s ease-in-out;
-            transform-origin: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .program-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transform: skewX(-20deg);
-            transition: left 0.5s ease-in-out;
-        }
-
-        .program-card:hover::after {
-            left: 100%;
-        }
-
-        @keyframes card-pop {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .program-card:hover {
-            transform: translateY(-15px) scale(1.15);
-            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
-            animation: hover-pop 0.6s ease-in-out;
-        }
-
-        @keyframes hover-pop {
-            0% {
-                transform: translateY(-15px) scale(1);
-            }
-            100% {
-                transform: translateY(-15px) scale(1.15);
-            }
-        }
-
-        .download-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 12px 25px;
-            background: linear-gradient(45deg, #28a745, #218838);
-            color: white;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: background 0.5s, transform 0.3s;
-            animation: fade-in-up 1.4s ease-in-out;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .download-btn:hover {
-            background: linear-gradient(45deg, #218838, #28a745);
-            transform: scale(1.1) rotate(-2deg);
-        }
-
-        .download-btn::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            background: rgba(255, 255, 255, 0.2);
-            transform: translate(-50%, -50%) scale(0);
-            border-radius: 50%;
-            transition: transform 0.5s;
-        }
-
-        .download-btn:hover::before {
-            transform: translate(-50%, -50%) scale(1);
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1001;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .modal-content {
-            background-color: #1a1a2e;
-            margin: 10% auto;
-            padding: 2rem;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 600px;
-            color: white;
-            border-radius: 15px;
-            text-align: center;
-            animation: modal-fade-in 0.8s ease-in-out;
-        }
-
-        @keyframes modal-fade-in {
-            0% {
-                transform: scale(0.8);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover, .close:focus {
-            color: #fff;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        footer {
-            background: #1a2a3a;
-            color: #fff;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
-            animation: fade-in 1s ease-in-out;
-        }
-
-        footer a {
-            color: #00e0ff;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: #009acb;
-            animation: pulse 1s infinite alternate;
-        }
-
-        @media screen and (max-width: 768px) {
-            header {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 3rem;
-            }
-
-            .about-section h2 {
-                font-size: 2.5rem;
-            }
-
-            .projects-section h2 {
-                font-size: 2.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="particles-js"></div>
-    <header id="header">
-        <div class="logo">NDXCode</div>
-        <a class="github-link" href="https://github.com/OneNkode" target="_blank" style="padding: 10px 20px; background: #00e0ff; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.5s, transform 0.3s;">GitHub</a>
+    
+    <header id="header" role="banner">
+        <div class="logo" aria-label="OneNKode Logo">OneNKode</div>
+        <nav role="navigation" style="display: flex; align-items: center; gap: 1rem;">
+            <a class="github-link" href="https://github.com/OneNkode" target="_blank" rel="noopener noreferrer" aria-label="Visit OneNKode on GitHub" style="padding: 10px 20px; background: #00e0ff; color: #fff; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.5s, transform 0.3s;">GitHub</a>
+        </nav>
     </header>
-    <section class="hero">
-        <div class="hero-content">
-            <h1>OneNKode</h1>
-        </div>
-    </section>
-    <section id="about" class="about-section">
-        <h2>Who is OneNKode?</h2>
-        <p>OneNKode is passionate about creating elegant and efficient programming solutions. Whether you're in need of modern web design, application development, or consulting, OneNKode is here to bring your ideas to life with a modern, sleek, and efficient approach.</p>
-    </section>
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
-        <input type="text" id="searchBar" placeholder="Search projects..." onkeyup="searchProjects()" style="margin-bottom: 2rem; padding: 10px; border-radius: 10px; border: none; width: 50%;">
-        <div class="projects-container">
-            <div class="program-card" onclick="openModal('Telegram Archiver')">
-                <h2>Telegram Archiver</h2>
-                <p>Release Date: nov 20, 2024</p>
-                <p>Version: 1.2</p>
-                <a href="https://github.com/OneNkode/TeleArchiver-/releases/download/V1.2/tele_archiver.exe" class="download-btn">Download</a>
+
+    <main>
+        <section class="hero" aria-label="Hero Section">
+            <div class="hero-content">
+                <h1><span style="white-space: nowrap;">OneNKode</span></h1>
             </div>
-            <div class="program-card" onclick="openModal('Printer Toolbox')">
-                <h2>Printer Toolbox</h2>
-                <p>Release Date: szept 23, 2024</p>
-                <p>Version: 1.2</p>
-                <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Printer-Toolbox_by_OneNKode_V1.1/printertoolbox.exe" class="download-btn">Download</a>
+        </section>
+
+        <section class="about-section" id="about" aria-label="About Section">
+            <h2>Who is OneNKode?</h2>
+            <p>OneNKode is passionate about creating elegant and efficient programming solutions. Whether you're in need of modern web design, application development, or consulting, OneNKode is here to bring your ideas to life with a modern, sleek, and efficient approach.</p>
+        </section>
+
+        <section class="projects-section" id="projects" aria-label="Projects Section">
+            <h2>My Projects</h2>
+            <div class="filter-controls">
+                <label for="searchBar" class="sr-only">Search projects</label>
+                <input type="text" id="searchBar" placeholder="🔍 Search projects..." aria-label="Search projects" onkeyup="filterProjects()" oninput="filterProjects()">
+                <label for="typeSelect" class="sr-only">Filter by type</label>
+                <select id="typeSelect" aria-label="Filter projects by type" onchange="filterProjects()">
+                    <option value="all" selected>All Types</option>
+                    <option value="EXE">EXE</option>
+                    <option value="APK">APK</option>
+                    <option value="WebApp">WebApp</option>
+                </select>
+                <label for="sortSelect" class="sr-only">Sort projects</label>
+                <select id="sortSelect" aria-label="Sort projects by date" onchange="sortProjects()">
+                    <option value="newest" selected>Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="default">Default Order</option>
+                </select>
+                <button id="schoolProjectsBtn" class="school-projects-btn" onclick="toggleSchoolProjects()" aria-label="Show school projects">
+                    <span id="schoolProjectsText">Show School Projects</span>
+                </button>
             </div>
-            <div class="program-card" onclick="openModal('Esmp Client')">
-                <h2>Esmp Client</h2>
-                <p>Release Date: szept 15, 2024</p>
-                <p>Version: 1.1.0</p>
-                <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Esmp-Client_byNDXcode_V1.1/ESMP-Client-v1.1.exe" class="download-btn">Download</a>
+            
+            <div class="projects-container" role="list">
+                <div class="program-card" role="listitem" tabindex="0" data-date="2024-09-23" data-link="https://github.com/OneNkode/onenkode.github.io/releases/download/Printer-Toolbox_by_OneNKode_V1.1/printertoolbox.exe" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>Printer Toolbox</h2>
+                    <p>Updated on: Sept 23, 2024</p>
+                    <p>Version: 1.2</p>
+                    <p class="project-type">Type: EXE</p>
+                    <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Printer-Toolbox_by_OneNKode_V1.1/printertoolbox.exe" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download Printer Toolbox">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2024-09-15" data-link="https://github.com/OneNkode/onenkode.github.io/releases/download/Esmp-Client_byNDXcode_V1.1/ESMP-Client-v1.1.exe" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>Esmp Client</h2>
+                    <p>Updated on: Sept 15, 2024</p>
+                    <p>Version: 1.1.0</p>
+                    <p class="project-type">Type: EXE</p>
+                    <a href="https://github.com/OneNkode/onenkode.github.io/releases/download/Esmp-Client_byNDXcode_V1.1/ESMP-Client-v1.1.exe" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download Esmp Client">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2024-11-21" data-link="https://github.com/OneNkode/OneNKode-SystemMonitor/releases/download/V1.6/OneNKode-SystemMonitor_1.6.exe" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>Super Specs</h2>
+                    <p>Updated on: Nov 21, 2024</p>
+                    <p>Version: 1.6</p>
+                    <p class="project-type">Type: EXE</p>
+                    <a href="https://github.com/OneNkode/OneNKode-SystemMonitor/releases/download/V1.6/OneNKode-SystemMonitor_1.6.exe" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download Super Specs">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2025-11-04" data-link="https://play.google.com/store/apps/details?id=com.onendx.regeocache&pli=1" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>reGeoCache</h2>
+                    <p>Updated on: Nov 4, 2025</p>
+                    <p>Version: 1.0</p>
+                    <p class="project-type">Type: APK</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.onendx.regeocache&pli=1" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download reGeoCache">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2025-11-05" data-link="https://play.google.com/store/apps/details?id=hu.megagarage.megagarage" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>Mega Garage</h2>
+                    <p>Updated on: Nov 5, 2025</p>
+                    <p>Version: 1.3.8</p>
+                    <p class="project-type">Type: APK</p>
+                    <a href="https://play.google.com/store/apps/details?id=hu.megagarage.megagarage" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download Mega Garage">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2025-09-21" data-link="https://play.google.com/store/apps/details?id=com.onenkode.weatherapp" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>NK Weather</h2>
+                    <p>Updated on: Sept 21, 2025</p>
+                    <p>Version: 5.3.1</p>
+                    <p class="project-type">Type: APK</p>
+                    <a href="https://play.google.com/store/apps/details?id=com.onenkode.weatherapp" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Download NK Weather">Download</a>
+                </div>
+
+                <div class="program-card" role="listitem" tabindex="0" data-date="2025-11-06" data-school="true" data-link="https://github.com/OneNkode/Papa-mama-hotel" onclick="window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')" onkeypress="if(event.key==='Enter') window.open(this.getAttribute('data-link'), '_blank', 'noopener,noreferrer')">
+                    <h2>Papa-mama hotel</h2>
+                    <p>Updated on: Nov 6, 2025</p>
+                    <p>Version: 1.0</p>
+                    <p class="project-type">Type: WebApp</p>
+                    <a href="https://github.com/OneNkode/Papa-mama-hotel" target="_blank" rel="noopener noreferrer" class="download-btn" onclick="event.stopPropagation();" aria-label="Open Papa-mama hotel project">Open Project</a>
+                </div>
             </div>
-            <div class="program-card" onclick="openModal('Super Specs')">
-                <h2>Super Specs</h2>
-                <p>Release Date: Nov 21, 2024</p>
-                <p>Version: 1.6</p>
-                <a href="https://github.com/OneNkode/OneNKode-SystemMonitor/releases/download/V1.6/OneNKode-SystemMonitor_1.6.exe" class="download-btn">Download</a>
-            </div>
-        </div>
-    </section>
-    <div id="myModal" class="modal">
+        </section>
+    </main>
+
+    <div id="myModal" class="modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" tabindex="-1">
         <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+            <button class="close" onclick="closeModal()" aria-label="Close modal" tabindex="0" onkeypress="if(event.key==='Enter'||event.key===' ') closeModal()">&times;</button>
             <h2 id="modalTitle"></h2>
-            <p>More details about the project will be displayed here, including features, screenshots, and technologies used.</p>
+            <p id="modalDescription"></p>
         </div>
     </div>
-    <footer id="contact">
+
+    <footer id="contact" role="contentinfo">
         <p>Copyright <sup>&copy;</sup> 2022-<b id="currentyear"></b> OneNKode | All rights reserved</p>
         <p>Connect with me on <a href="https://github.com/OneNkode" target="_blank">GitHub</a></p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="particles-config.js"></script>
     <script>
         document.getElementById("currentyear").innerHTML = new Date().getFullYear();
 
-        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json', function() {
-            console.log('Particles.js config loaded');
-        });
+        let showSchoolProjectsOnly = false;
 
-        function searchProjects() {
-            const input = document.getElementById('searchBar').value.toLowerCase();
-            const projectCards = document.getElementsByClassName('program-card');
-            Array.from(projectCards).forEach(card => {
-                const title = card.getElementsByTagName('h2')[0].innerText.toLowerCase();
-                card.style.display = title.includes(input) ? 'block' : 'none';
-            });
+        function toggleSchoolProjects() {
+            showSchoolProjectsOnly = !showSchoolProjectsOnly;
+            const btn = document.getElementById('schoolProjectsBtn');
+            const text = document.getElementById('schoolProjectsText');
+            
+            if (showSchoolProjectsOnly) {
+                text.textContent = 'Show All Projects';
+                btn.classList.add('active');
+            } else {
+                text.textContent = 'Show School Projects';
+                btn.classList.remove('active');
+            }
+            
+            filterProjects();
         }
 
-        function openModal(projectName) {
-            document.getElementById('myModal').style.display = 'block';
-            document.getElementById('modalTitle').innerText = projectName;
+        function filterProjects() {
+            const searchInput = document.getElementById('searchBar').value.toLowerCase().trim();
+            const typeSelect = document.getElementById('typeSelect');
+            const selectedType = typeSelect.value;
+            const projectCards = document.getElementsByClassName('program-card');
+            let visibleCount = 0;
+            
+            Array.from(projectCards).forEach(card => {
+                const title = card.getElementsByTagName('h2')[0].innerText.toLowerCase();
+                const typeElement = card.querySelector('.project-type');
+                const cardType = typeElement ? typeElement.innerText.replace('Type: ', '').trim() : '';
+                const isSchoolProject = card.hasAttribute('data-school') && card.getAttribute('data-school') === 'true';
+                
+                // Check if school projects mode is active
+                if (showSchoolProjectsOnly) {
+                    // Only show school projects
+                    if (!isSchoolProject) {
+                        card.style.display = 'none';
+                        return;
+                    }
+                } else {
+                    // Hide school projects by default
+                    if (isSchoolProject) {
+                        card.style.display = 'none';
+                        return;
+                    }
+                }
+                
+                // Check search filter
+                const matchesSearch = searchInput === '' || title.includes(searchInput);
+                
+                // Check type filter
+                const matchesType = selectedType === 'all' || cardType === selectedType;
+                
+                const shouldShow = matchesSearch && matchesType;
+                card.style.display = shouldShow ? 'block' : 'none';
+                if (shouldShow) visibleCount++;
+            });
+            
+            // Show message if no results
+            const container = document.querySelector('.projects-container');
+            let noResultsMsg = document.getElementById('noResults');
+            if (visibleCount === 0) {
+                if (!noResultsMsg) {
+                    noResultsMsg = document.createElement('p');
+                    noResultsMsg.id = 'noResults';
+                    noResultsMsg.style.cssText = 'width: 100%; font-size: 1.2rem; margin-top: 2rem; color: #888;';
+                    container.appendChild(noResultsMsg);
+                }
+                let message = 'No projects found';
+                if (showSchoolProjectsOnly) {
+                    message = 'No school projects found';
+                    if (searchInput !== '') {
+                        message = `No school projects found matching "${document.getElementById('searchBar').value}"`;
+                    }
+                } else if (searchInput !== '' && selectedType !== 'all') {
+                    message = `No ${selectedType} projects found matching "${document.getElementById('searchBar').value}"`;
+                } else if (searchInput !== '') {
+                    message = `No projects found matching "${document.getElementById('searchBar').value}"`;
+                } else if (selectedType !== 'all') {
+                    message = `No ${selectedType} projects found`;
+                }
+                noResultsMsg.textContent = message;
+            } else if (noResultsMsg) {
+                noResultsMsg.remove();
+            }
+            
+            // Re-sort after filtering
+            sortProjects();
+        }
+
+        // Store original order on page load
+        const container = document.querySelector('.projects-container');
+        const originalOrder = Array.from(container.querySelectorAll('.program-card'));
+
+        // Hide school projects by default on page load
+        Array.from(originalOrder).forEach(card => {
+            const isSchoolProject = card.hasAttribute('data-school') && card.getAttribute('data-school') === 'true';
+            if (isSchoolProject) {
+                card.style.display = 'none';
+            }
+        });
+
+        // Sort projects by newest first on page load
+        function initialSort() {
+            const cards = Array.from(container.querySelectorAll('.program-card'));
+            cards.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-date'));
+                const dateB = new Date(b.getAttribute('data-date'));
+                return dateB - dateA; // Newest first (descending)
+            });
+            cards.forEach(card => container.appendChild(card));
+        }
+
+        // Run initial sort when page loads
+        initialSort();
+
+        function sortProjects() {
+            const sortSelect = document.getElementById('sortSelect');
+            const sortValue = sortSelect.value;
+            const cards = Array.from(container.querySelectorAll('.program-card'));
+            
+            // Filter out hidden cards (from search) and store them separately
+            const visibleCards = cards.filter(card => card.style.display !== 'none');
+            const hiddenCards = cards.filter(card => card.style.display === 'none');
+            
+            if (sortValue === 'default') {
+                // Restore original order based on data-date order
+                const allCards = [...visibleCards, ...hiddenCards];
+                allCards.sort((a, b) => {
+                    const indexA = originalOrder.findIndex(card => card === a);
+                    const indexB = originalOrder.findIndex(card => card === b);
+                    return indexA - indexB;
+                });
+                allCards.forEach(card => container.appendChild(card));
+            } else {
+                // Sort visible cards by date
+                visibleCards.sort((a, b) => {
+                    const dateA = new Date(a.getAttribute('data-date'));
+                    const dateB = new Date(b.getAttribute('data-date'));
+                    
+                    if (sortValue === 'newest') {
+                        return dateB - dateA; // Newest first (descending)
+                    } else if (sortValue === 'oldest') {
+                        return dateA - dateB; // Oldest first (ascending)
+                    }
+                    return 0;
+                });
+                
+                // Re-append visible cards in sorted order, then hidden cards
+                visibleCards.forEach(card => container.appendChild(card));
+                hiddenCards.forEach(card => container.appendChild(card));
+            }
+        }
+
+        function openModal(projectName, description = 'More details about the project will be displayed here, including features, screenshots, and technologies used.') {
+            const modal = document.getElementById('myModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDescription');
+            
+            if (modal && modalTitle && modalDesc) {
+                modal.style.display = 'block';
+                modalTitle.innerText = projectName;
+                modalDesc.innerText = description;
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                modal.focus(); // Focus for accessibility
+            }
         }
 
         function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
+            const modal = document.getElementById('myModal');
+            if (modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
         }
 
-        // Header background brightness effect following mouse movement
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Header background brightness effect following mouse movement (desktop only)
         const header = document.getElementById('header');
-        document.addEventListener('mousemove', function(e) {
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            const brightness = 1.2 + x * 0.5;
-            header.style.background = `linear-gradient(135deg, rgba(26, 42, 58, ${brightness}), rgba(42, 64, 87, ${brightness}))`;
+        if (header && window.matchMedia('(hover: hover)').matches) {
+            document.addEventListener('mousemove', function(e) {
+                const x = e.clientX / window.innerWidth;
+                const brightness = 1.2 + x * 0.5;
+                header.style.background = `linear-gradient(135deg, rgba(26, 42, 58, ${brightness}), rgba(42, 64, 87, ${brightness}))`;
+            });
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
         });
     </script>
 </body>
 </html>
+

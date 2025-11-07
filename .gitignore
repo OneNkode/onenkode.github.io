@@ -1,0 +1,20 @@
+# Uploads directory
+uploads/
+
+# Database configuration (if you want to keep it private)
+# config.php
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
